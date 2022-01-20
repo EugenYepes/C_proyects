@@ -1,2 +1,2 @@
-# C_proyects
-Proyects in C lenguaje
+# TP_Imagenes
+Programa que hace zoom y rota imagenes .bmp
