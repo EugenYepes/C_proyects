@@ -135,7 +135,7 @@ void cargarImagenMatriz(unsigned char *imagen, union Cabecera cabecera, pixel **
 void cargarCoordenadas(union Cabecera cabecera, pixel **matPixel)
 {
     int fila, columna, x, y;
-    //(-1) porque se empieza a cargar desde el segundo cuadrante, abajo a la izquierda
+    //(-1) porque se empieza a cargar desde el tercer cuadrante, abajo a la izquierda
     y = (-1) * puntoMedio(cabecera.fHeader.alto);
     for (fila = 0; fila < cabecera.fHeader.alto; fila++)
     {
@@ -448,7 +448,7 @@ void continuidadCopia(pixel **copiaPixel, pixel **matPixel, union Cabecera cabec
             }
             else if (matPixel[fila + 1][columna].y > (matPixel[fila][columna].y + pos)) // hay zoom
             {
-                i++; // se llena la siguiente columna con rojo
+                i++; // se llena la siguiente columna
                 for (pos = 1; matPixel[fila + 1][columna].y > (matPixel[fila][columna].y + pos); pos++)
                 {
                     for (j = 0; j < cabeceraCopia.fHeader.ancho; j++)
